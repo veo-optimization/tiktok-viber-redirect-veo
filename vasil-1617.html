@@ -7,12 +7,21 @@
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
             background: linear-gradient(135deg, #e0c2ff, #f7b7ff);
             font-family: 'Montserrat', sans-serif;
+        }
+        .tiktok-text {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #42c2ff, #ff0050, #90ee90);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .container {
             text-align: center;
@@ -46,8 +55,9 @@
     </script>
 </head>
 <body>
+    <div class="tiktok-text">ТікТок-магазин</div>
     <div class="container">
-        <p>Переадресація на чат із менеджером магазину</p>
+        <p>Вас автоматично перенаправляють у Viber...</p>
         <a href="viber://chat?number=%2B380939313562" class="button">Відкрити чат Viber</a>
     </div>
 </body>
