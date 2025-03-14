@@ -4,6 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Перехід у Viber</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: sans-serif;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
     <script>
         window.onload = function() {
             window.location.replace("viber://chat?number=%2B380939313562");
@@ -11,6 +36,8 @@
     </script>
 </head>
 <body>
-    <p>Вас автоматично перенаправляють у Viber...</p>
+    <div class="container">
+        <p>Вас автоматично перенаправляють у Viber...</p>
+    </div>
 </body>
 </html>
