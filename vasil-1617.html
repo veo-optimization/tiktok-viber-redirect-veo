@@ -1,40 +1,9 @@
-import android.content.Intent;
-import android.net.Uri;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-public class MainActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        Button viberButton = findViewById(R.id.viberButton);
-        viberButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openViber();
-            }
-        });
-    }
-
-    private void openViber() {
-        String phoneNumber = "+380682211617";
-        String encodedPhoneNumber = Uri.encode(phoneNumber);
-        String viberUrl = "viber://chat?number=" + encodedPhoneNumber;
-
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse(viberUrl));
-
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
-        } else {
-            Toast.makeText(this, "Viber не встановлено", Toast.LENGTH_SHORT).show();
-        }
-    }
-}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Viber Chat Link</title>
+</head>
+<body>
+    <a href="viber://chat?number=%2B380939313562">Відкрити чат у Viber</a>
+</body>
+</html>
